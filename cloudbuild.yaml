@@ -1,6 +1,3 @@
-steps:
-- name: 'Initialize'
-  args: ['echo', 'Hello world!']
 logsBucket: 'gs://paulo-actualbudget-cloudbuild-logs'
 serviceAccount: 'projects/paulo-actualbudget/serviceAccounts/cloud-build-service-account@paulo-actualbudget.iam.gserviceaccount.com'
 options:
