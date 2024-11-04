@@ -1,4 +1,7 @@
-serviceAccount: cloud-build-service-account@paulo-actualbudget.iam.gserviceaccount.com
-
+steps:
+- name: 'Initialize'
+  args: ['echo', 'Hello world!']
+logsBucket: 'gs://paulo-actualbudget-cloudbuild-logs'
+serviceAccount: 'projects/paulo-actualbudget/serviceAccounts/cloud-build-service-account@paulo-actualbudget.iam.gserviceaccount.com'
 options:
-  logging: CLOUD_LOGGING_ONLY
+  logging: GCS_ONLY
