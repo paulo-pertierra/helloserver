@@ -1,7 +1,8 @@
 steps:
 - name: "gcr.io/cloud-builders/docker"
-  args: ["build", "-t", "gcr.io/paulo-actualbudget/actualbudget", "."]
-  entrypoint: "docker"
+  args: ["build", "-t", "asia-southeast1-docker.pkg.dev/paulo-actualbudget/helloserver:latest", "."]
+- name: "gcr.io/cloud-builders/docker"
+  args: ["push", "asia-southeast1-docker.pkg.dev/paulo-actualbudget/helloserver:latest"]
 logsBucket: 'gs://paulo-actualbudget-cloudbuild-logs'
 serviceAccount: 'projects/paulo-actualbudget/serviceAccounts/cloud-build-service-account@paulo-actualbudget.iam.gserviceaccount.com'
 options:
