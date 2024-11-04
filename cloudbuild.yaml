@@ -1,5 +1,5 @@
 steps:
-- name: "Build"
+- name: "gcr.io/cloud-builders/docker"
   args: ["build", "-t", "gcr.io/paulo-actualbudget/actualbudget", "."]
   entrypoint: "docker"
 logsBucket: 'gs://paulo-actualbudget-cloudbuild-logs'
