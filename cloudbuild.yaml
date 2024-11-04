@@ -1,2 +1,4 @@
+serviceAccount: cloud-build-service-account@paulo-actualbudget.iam.gserviceaccount.com
+
 options:
   logging: CLOUD_LOGGING_ONLY
