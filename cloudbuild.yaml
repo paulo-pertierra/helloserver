@@ -1,3 +1,7 @@
+steps:
+- name: "Build"
+  args: ["build", "-t", "gcr.io/paulo-actualbudget/actualbudget", "."]
+  entrypoint: "docker"
 logsBucket: 'gs://paulo-actualbudget-cloudbuild-logs'
 serviceAccount: 'projects/paulo-actualbudget/serviceAccounts/cloud-build-service-account@paulo-actualbudget.iam.gserviceaccount.com'
 options:
