@@ -2,7 +2,7 @@ steps:
 - name: "gcr.io/cloud-builders/docker"
   args: ["build", "-t", "asia-southeast1-docker.pkg.dev/paulo-actualbudget/helloserver/helloserver:latest", "."]
 - name: "gcr.io/cloud-builders/docker"
-    args: ["push", "asia-southeast1-docker.pkg.dev/paulo-actualbudget/helloserver/helloserver:latest"]
+  args: ["push", "asia-southeast1-docker.pkg.dev/paulo-actualbudget/helloserver/helloserver:latest"]
 - name: "curlimages/curl"
   args: 
     - "-X"
