@@ -1,6 +1,11 @@
 steps:
 - name: "gcr.io/cloud-builders/docker"
   args: ["build", "-t", "asia-southeast1-docker.pkg.dev/paulo-actualbudget/helloserver/helloserver:latest", "."]
+- name: "curlimages/curl"
+  args: 
+    - "-X"
+    - "POST"
+    - "https://docker.keskella.work/api/stacks/webhooks/13ff3d4b-52ec-4788-a6a2-3392cc5f8d1f"
 images: ["asia-southeast1-docker.pkg.dev/paulo-actualbudget/helloserver/helloserver:latest"]
 logsBucket: 'gs://paulo-actualbudget-cloudbuild-logs'
 serviceAccount: 'projects/paulo-actualbudget/serviceAccounts/cloud-build-service-account@paulo-actualbudget.iam.gserviceaccount.com'
